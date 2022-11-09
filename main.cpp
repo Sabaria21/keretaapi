@@ -11,7 +11,7 @@ int proj = 1, new_mouse = 0, mouse_rot = 1, mouse_trn = 0;
 float turn = 20.0, tipp = 10.0, twst = 0.0, x_click = 0, y_click = 0, xtm = 0.0, ytm = 0.0,
       scl = 0.80, xcr = 30.0;
 
-GLfloat lit1_spc[] = {0.20, 0.20,  0.15, 1.00},
+GLfloat lit1_spc[] = {0.20, 0.20,  0.15, 1.00},  //perubahan branch tiga
         lit1_dfs[] = {0.70, 0.70,  0.65, 1.00},
 		lit1_amb[] = {0.25, 0.25,  0.20, 1.00},
 		lit1_pos[] = {0.20, 2.50,  5.20, 1.00};
@@ -268,7 +268,7 @@ void Kereta (void)
        glColor3f (0.7, 0.7, 0.5);
        Vrt(25,  0, 15); Vrt( 75,  0, 15); Vrt(75,15, 15); Vrt(25,15, 15);  // kaca kiri
        Vrt(25,  0,-15); Vrt( 75,  0,-15); Vrt(75,15,-15); Vrt(25,15,-15);  // kaca kanan
-       glColor3f (0.4, 0.6, 0.8);
+       glColor3f (0.0, 0.0, 0.15);
        Vrt(25, 15, 15); Vrt(25, 15,-15); Vrt( 75, 15,-15); Vrt( 75, 15, 15);  // atap
        glColor3f (0.4, 0.5, 0.5);
        Vrt(25, -15, 15); Vrt(25, -15,-15); Vrt( 75, -15,-15); Vrt( 75, -15, 15);  // bawah
@@ -376,7 +376,7 @@ void Display (void)
     glScalef     (scl, scl, scl );       // Scale world relative to its origin.
     glScalef     (0.02, 0.02, 0.02);
 
-    Rel ();
+    Rel ();                             // menjalankan tampilan
     glTranslatef (-xcr, 0.0, 0.0);
     Penyambung_roda ();
     Kereta  ();
